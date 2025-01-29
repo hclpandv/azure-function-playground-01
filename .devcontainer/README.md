@@ -1,0 +1,1 @@
+## Azure playground to develop azure functions
