@@ -6,8 +6,29 @@
 
 1. Use `az login` to login to the Azure account.
 2. Use `deploy-azurefunctionapp.sh` script to deploy azure function app. (python)
-3. Create a new python function  
+3. Create a new python (v2 model) function  
 
 ```bash
+func init python_demo_project_01 --python -m v2
 
 ```
+4. Setup virtual env for developement and install dependencies
+
+```bash
+cd python_demo_project_01
+python -m venv .venv
+# you can pip list to see the existing python packages
+pip list
+# Install packages from requirements.txt file
+pip install -r requirements.txt 
+```
+
+5. You may wanna use a template to add a function code based on a perticular trigger. This will add new def(function) into `function_app.py` file 
+
+```bash
+func new --name HttpExample --template "HTTP trigger"
+# you can simply type below and then you get to choose apropriate option to start witha template
+func new
+```
+
+6. Use `func start` to test the function app locally. This will give you a localhost url for testing
