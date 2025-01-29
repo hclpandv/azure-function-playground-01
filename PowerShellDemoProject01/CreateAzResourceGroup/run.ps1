@@ -12,6 +12,8 @@ if ($Timer.IsPastDue) {
 # Perform Azure Operations
 $rgs = Get-AzResourceGroup
 
+Write-Output "Total number of resource groups found in the subscription $((Get-AzSubscription).name) is: $($rgs.count)"
+
 foreach ($rg in $rgs) {
     Write-Output "Resourcegroup found: $($rg.ResourceGroupName) in Azure Region of $($rg.Location)"
 }
