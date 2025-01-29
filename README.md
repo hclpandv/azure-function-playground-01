@@ -11,6 +11,11 @@
 ```bash
 func init python_demo_project_01 --python -m v2
 
+# or you can 
+mkdir python_demo_project_01
+cd python_demo_project_01
+func init --python -m v2
+
 ```
 4. Setup virtual env for developement and install dependencies
 
