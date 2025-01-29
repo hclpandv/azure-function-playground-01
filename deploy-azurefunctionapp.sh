@@ -23,4 +23,5 @@ az functionapp create \
     --functions-version 4 \
     --name $AZURE_FUNCTION_NAME \
     --os-type linux \
-    --storage-account $STORAGE_NAME
+    --storage-account $STORAGE_NAME \
+    --assign-identity '[system]'

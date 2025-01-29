@@ -26,9 +26,16 @@ pip install -r requirements.txt
 5. You may wanna use a template to add a function code based on a perticular trigger. This will add new def(function) into `function_app.py` file 
 
 ```bash
-func new --name HttpExample --template "HTTP trigger"
+func new --name http_example --template "HTTP trigger"
 # you can simply type below and then you get to choose apropriate option to start witha template
 func new
 ```
 
 6. Use `func start` to test the function app locally. This will give you a localhost url for testing
+
+7. Now, after succsefull testing you may publish it to azure
+
+```bash
+export APP_NAME='functionappdemoae3bb7'
+func azure functionapp publish $APP_NAME
+```
