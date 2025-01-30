@@ -1,3 +1,8 @@
+<#
+  This Azure function will communicate with Azure Resource Manager via Az modules. 
+  hence ENSURE REQUIRED RBAC FOR THE FUNCTION APP IDENTITY  
+#>
+
 # Input bindings are passed in via param block.
 param($Timer)
 
