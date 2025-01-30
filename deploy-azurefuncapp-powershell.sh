@@ -2,6 +2,7 @@ export RANDOM_ID="$(openssl rand -hex 3)"
 export RESOURCE_GROUP_NAME="rg-module-test-01"
 export REGION="westeurope"
 export AZURE_FUNCTION_NAME="functionappdemo$RANDOM_ID"
+export AZURE_FUNCTION_RBAC_ROLE="Reader"
 export STORAGE_NAME="functionappdemo$RANDOM_ID"
 
 # Get the subscription ID
@@ -34,8 +35,6 @@ PRINCIPAL_ID=$(az functionapp identity show \
     --name $AZURE_FUNCTION_NAME \
     --resource-group $RESOURCE_GROUP_NAME \
     --query "principalId" -o tsv)
-
-AZURE_FUNCTION_RBAC_ROLE="Reader"
 
 # Get the current user's Object ID
 USER_ID=$(az ad signed-in-user show --query "id" -o tsv)
