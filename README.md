@@ -22,6 +22,8 @@ func init --python -m v2
 ```bash
 cd python_demo_project_01
 python -m venv .venv
+# activate venv
+source .venv/bin/activate
 # you can pip list to see the existing python packages
 pip list
 # Install packages from requirements.txt file
